@@ -9,7 +9,7 @@ You can view and manage your unique API key in your publication’s settings. Yo
 Add your API key to every request by including `key` in the query params. When retrieving a list of your published posts, for example, your GET request could look like this:
 
 ```
-https://api.postodian.com/v1/posts?key=8637070eccf71b29f0e859f1bd5d9257
+https://api.postodian.com/v1/posts?key=pk_febaf9ad8a2dc82a16d1d923
 ```
 
 You can see that the request URI quickly becomes illegible. You can alternatively supply your API key in your headers. See below for instructions.
@@ -19,7 +19,7 @@ You can see that the request URI quickly becomes illegible. You can alternativel
 In your request’s headers, add a string to the `Authorization` key that containing the `Credential` method and your API key separated with a space. Example for your authorization header using a sample API key:
 
 ```
-Authorization: 'Credential 8637070eccf71b29f0e859f1bd5d9257'
+Authorization: "Credential pk_febaf9ad8a2dc82a16d1d923"
 ```
 
 This method can be convenient to globally declare an authorization header for your entire app. Supplying your API key in each query params will become redundant.

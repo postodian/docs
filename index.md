@@ -6,6 +6,6 @@ The JSON format ensures maximum compatibility with industry-standard web applica
 
 ## API Key
 
-A unique API key is assigned to you during registration. It is your gateway to interact with Postodian’s API endpoints. Use your key to authenticate all your requests using one of the [two authentication methods](/docs/authentication).
+A unique API key is assigned to you during registration. It is your gateway to interact with Postodian’s API endpoints. Use your key to authenticate all your requests using one of the [two authentication methods](https://postodian.com/docs/authentication).
 
 The key can be reset anytime from within your dashboard. This can be useful in the event that your key has been compromised. Please mind that resetting a key can break your application if it is not updated there at the same time.
