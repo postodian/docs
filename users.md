@@ -29,7 +29,7 @@ Retrieves a list of user objects associated with your publication.
 ### Request
 
 ```
-curl https://api.postodian.com/v1/users \
+curl -X GET https://api.postodian.com/v1/users \
      -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
 ```
 
@@ -76,7 +76,7 @@ Retrieves a user object by its unique identifier.
 ### Request
 
 ```
-curl https://api.postodian.com/v1/users/:id \
+curl -X GET https://api.postodian.com/v1/users/:id \
      -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
 ```
 

@@ -34,7 +34,7 @@ Since the number of posts returned by this endpoint is limited to 100, it is not
 ### Request
 
 ```
-curl https://api.postodian.com/v1/posts \
+curl -X GET https://api.postodian.com/v1/posts \
      -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
 ```
 
@@ -97,7 +97,7 @@ Retrieves a published post object by its unique slug. Unpublished posts (i.e. dr
 ### Request
 
 ```
-curl https://api.postodian.com/v1/posts/:slug \
+curl -X GET https://api.postodian.com/v1/posts/:slug \
      -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
 ```
 

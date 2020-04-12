@@ -9,7 +9,7 @@ Retrieves a list of all published posts. Unpublished posts (i.e. drafted or sche
 ### Request
 
 ```
-curl https://api.postodian.com/v1/sitemap \
+curl -X GET https://api.postodian.com/v1/sitemap \
      -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
 ```
 

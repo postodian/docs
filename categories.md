@@ -21,7 +21,7 @@ Retrieves a list of category objects for your publication. Results are sorted by
 ### Request
 
 ```
-curl https://api.postodian.com/v1/categories \
+curl -X GET https://api.postodian.com/v1/categories \
      -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
 ```
 
@@ -51,7 +51,7 @@ Retrieves a category object by its unique identifier.
 ### Request
 
 ```
-curl https://api.postodian.com/v1/categories/:id \
+curl -X GET https://api.postodian.com/v1/categories/:id \
      -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
 ```
 

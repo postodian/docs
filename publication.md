@@ -21,7 +21,7 @@ Retrieves the publication object associated with your public key.
 ### Request
 
 ```
-curl https://api.postodian.com/v1/publication \
+curl -X GET https://api.postodian.com/v1/publication \
      -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
 ```
 
