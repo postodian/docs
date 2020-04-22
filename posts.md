@@ -19,7 +19,6 @@ We included as much data as possible to help you create SEO-friendly meta tags f
 | `pinned` | Boolean that indicates whether the post was marked as pinned. |
 | `publishedAt` | ISO date at which the post was published. |
 | `slug` | Auto-generated slug based on the title. Once a post is published, it is no longer changed automatically. |
-| `status` | Status of the post. Posts are created with `draft` status. You can schedule the post of publishing upon which the status changes to `scheduled`. Once a post is public, the status becomes `published`. |
 | `tags` | Array of strings by which posts can be queried. |
 | `title` | Title of the post. |
 | `updatedAt` | ISO date at which the object was last modified. |
@@ -77,7 +76,6 @@ curl -X GET https://api.postodian.com/v1/posts \
       "pinned": false,
       "publishedAt": "2020-03-21T12:57:00.014Z",
       "slug": "lorem-ipsum-dolor-sit-amet",
-      "status": "published",
       "tags": [],
       "title": "Lorem ipsum dolor sit amet",
       "updatedAt": "2020-04-04T16:05:35.681Z",
@@ -136,7 +134,6 @@ Using `html` can be useful if you do not want to iterate through the blocks and 
   "pinned": false,
   "publishedAt": "2020-03-21T12:57:00.014Z",
   "slug": "lorem-ipsum-dolor-sit-amet",
-  "status": "published",
   "tags": [],
   "title": "Lorem ipsum dolor sit amet",
   "updatedAt": "2020-04-04T16:05:35.681Z",
