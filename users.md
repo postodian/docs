@@ -11,8 +11,8 @@ With the `user` object, you can enrich your posts with biographical information 
 | `bio` | Bio with up to 1,000 characters which you can edit in your publication’s user administration. |
 | `email` | Email address which you can edit in your publication’s user administration. |
 | `externalId` | An external ID can be useful if you maintain your own user accounts and would like to create a reference to a user in it. |
-| `image.uuid` | Picture which the user has uploaded in the profile settings. We use [Uploadcare](https://uploadcare.com) for adaptive image processing and delivery. Each uploaded file links to a unique file identifier. If the provided `image.resolutions` are inadequate, you can perform your own [image transformations](https://uploadcare.com/docs/image_transformations/) with the UUID. |
-| `image.resolutions` | Thumbnail image sources in various resolutions: `default`, `low`, `medium` and `high`. |
+| `image.hash` | Picture which the user has uploaded in the profile settings. We use [imgix](https://imgix.com) for adaptive image processing and delivery. Each uploaded file links to a unique file identifier (hash). If the provided `image.resolutions` are inadequate, you can perform your own [image transformations](https://docs.imgix.com/apis/rendering) with the hash. |
+| `image.resolutions` | Thumbnail image URLs in various resolutions: `default` (80px), `160`, `320`, `540` and `1080`. |
 | `name` | Name of the user. |
 | `phone` | Phone number which you can edit in your publication’s user administration. |
 | `postsCount` | Count of posts this user has written for the publication. |
@@ -30,13 +30,14 @@ Retrieves a list of user objects associated with your publication.
 
 ```
 curl -X GET https://api.postodian.com/v1/users \
-     -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
+     -H "X-API-KEY: pk_febaf9ad8a2dc82a16d1d923" \
 ```
 
 ### Response
 
 ```
 {
+  "hasMore": false,
   "users": [
     {
       "id": "DQfg-HWhQ",
@@ -44,12 +45,13 @@ curl -X GET https://api.postodian.com/v1/users \
       "email": "michael@writer.com",
       "externalId": null,
       "image": {
-        "uuid": null,
+        "hash": null,
         "resolutions": {
           "default": null,
-          "low": null,
-          "medium": null,
-          "high": null
+          "160": null,
+          "320": null,
+          "540": null,
+          "1080": null
         }
       },
       "name": "Michael Writer",
@@ -77,7 +79,7 @@ Retrieves a user object by its unique identifier.
 
 ```
 curl -X GET https://api.postodian.com/v1/users/:id \
-     -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
+     -H "X-API-KEY: pk_febaf9ad8a2dc82a16d1d923" \
 ```
 
 ### Response
@@ -89,12 +91,13 @@ curl -X GET https://api.postodian.com/v1/users/:id \
   "email": "michael@writer.com",
   "externalId": null,
   "image": {
-    "uuid": null,
+    "hash": null,
     "resolutions": {
       "default": null,
-      "low": null,
-      "medium": null,
-      "high": null
+      "160": null,
+      "320": null,
+      "540": null,
+      "1080": null
     }
   },
   "name": "Michael Writer",

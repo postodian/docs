@@ -1,6 +1,6 @@
 # Sitemap
 
-This endpoint is similar to the [posts endpoint](https://postodian.com/docs/posts), but optimized for generating sitemaps as it returns the complete list of all posts with only the relevant fields.
+This endpoint is similar to the [posts endpoint](https://postodian.com/docs/posts), but specifically designed for generating sitemaps. It returns the complete list of all posts with only relevant fields.
 
 ## List All Posts
 
@@ -10,7 +10,7 @@ Retrieves a list of all published posts. Unpublished posts (i.e. drafted or sche
 
 ```
 curl -X GET https://api.postodian.com/v1/sitemap \
-     -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
+     -H "X-API-KEY: pk_febaf9ad8a2dc82a16d1d923" \
 ```
 
 ### Response

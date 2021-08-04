@@ -22,7 +22,7 @@ Retrieves a list of category objects for your publication. Results are sorted by
 
 ```
 curl -X GET https://api.postodian.com/v1/categories \
-     -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
+     -H "X-API-KEY: pk_febaf9ad8a2dc82a16d1d923" \
 ```
 
 ### Response
@@ -40,7 +40,8 @@ curl -X GET https://api.postodian.com/v1/categories \
       "updatedAt": "2020-02-17T17:04:42.336Z"
     }
   ],
-  "categoriesCount": 1
+  "categoriesCount": 1,
+  "hasMore": false
 }
 ```
 
@@ -52,7 +53,7 @@ Retrieves a category object by its unique identifier.
 
 ```
 curl -X GET https://api.postodian.com/v1/categories/:id \
-     -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
+     -H "X-API-KEY: pk_febaf9ad8a2dc82a16d1d923" \
 ```
 
 ### Response

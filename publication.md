@@ -22,7 +22,7 @@ Retrieves the publication object associated with your public key.
 
 ```
 curl -X GET https://api.postodian.com/v1/publication \
-     -H "Authorization: Credential pk_febaf9ad8a2dc82a16d1d923" \
+     -H "X-API-KEY: pk_febaf9ad8a2dc82a16d1d923" \
 ```
 
 ### Response
