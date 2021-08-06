@@ -1,6 +1,6 @@
 # Users
 
-With the `user` object, you can enrich your posts with biographical information about an author (or authors). The user object is a merge of profile information provided by the users themselves, and what you have set for the user in your publication’s user administration.
+With the user object, you can enrich your posts with biographical information about an author (or authors). The user object is a merge of profile information provided by the users themselves, and what you have set for the user in your publication’s user administration.
 
 ## The User Object
 
@@ -11,8 +11,8 @@ With the `user` object, you can enrich your posts with biographical information 
 | `bio` | Bio with up to 1,000 characters which you can edit in your publication’s user administration. |
 | `email` | Email address which you can edit in your publication’s user administration. |
 | `externalId` | An external ID can be useful if you maintain your own user accounts and would like to create a reference to a user in it. |
-| `image.hash` | Picture which the user has uploaded in the profile settings. We use [imgix](https://imgix.com) for adaptive image processing and delivery. Each uploaded file links to a unique file identifier (hash). If the provided `image.resolutions` are inadequate, you can perform your own [image transformations](https://docs.imgix.com/apis/rendering) with the hash. |
-| `image.resolutions` | Thumbnail image URLs in various resolutions: `default` (80px), `160`, `320`, `540` and `1080`. |
+| `image.hash` | Unique image file identifier (hash). |
+| `image.resolutions` | Thumbnail image URLs in various resolutions: `default` (80px), `160`, `320`, `540` and `1080`. We use [imgix](https://imgix.com) for adaptive image processing and delivery. If the provided resolutions are inadequate, you can perform your own [image transformations](https://docs.imgix.com/apis/rendering) with the `image.hash`. |
 | `name` | Name of the user. |
 | `phone` | Phone number which you can edit in your publication’s user administration. |
 | `postsCount` | Count of posts this user has written for the publication. |

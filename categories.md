@@ -1,6 +1,6 @@
 # Categories
 
-A `category` object allows you to offer blog pages specific to a category. The endpoints return relevant data with which you can generate meta tags.
+A category object can be attached to posts and makes them filterable by category. As a consequence, you can offer category pages in your blog including metadata returned by the endpoints.
 
 ## The Category Object
 

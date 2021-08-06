@@ -1,6 +1,6 @@
 # Posts
 
-A `post` object contains all relevant data required in order to display a post on your website. It also contains hydrated data of associated categories and of associated users.
+A post object contains all relevant data required in order to display a post on your website. It also contains hydrated data of associated categories and of associated users.
 
 We included as much data as possible to help you create SEO-friendly meta tags for a page’s head and rich display of SERP.
 
@@ -11,11 +11,12 @@ We included as much data as possible to help you create SEO-friendly meta tags f
 | `id` | Unique identifier for the object. |
 | `blocks` | Array of block objects that make up the post’s content. This field is included by default if the `output` parameter is not set. |
 | `categories` | Array of [category objects](https://postodian.com/docs/categories) associated with the post. |
+| `cta` | Populated call-to-action object if attached. Defaults to `null`. |
 | `createdAt` | ISO date at which the object was created. |
 | `description` | Description of the post used in meta tags. |
 | `html` | HTML version of the post’s content. This field is only included if the `output` parameter is set to `html`. |
-| `image.hash` | We use [imgix](https://imgix.com) for adaptive image processing and delivery. Each uploaded file links to a unique file identifier (hash). If the provided `image.resolutions` are inadequate, you can perform your own [image transformations](https://docs.imgix.com/apis/rendering) with the hash. |
-| `image.resolutions` | Thumbnail image sources in various resolutions: `default` (730px), `160`, `350`, `540` and `1110`. |
+| `image.hash` | Unique image file identifier (hash). |
+| `image.resolutions` | Thumbnail image sources in various resolutions: `default` (730px), `160`, `350`, `540` and `1110`. We use [imgix](https://imgix.com) for adaptive image processing and delivery. If the provided resolutions are inadequate, you can perform your own [image transformations](https://docs.imgix.com/apis/rendering) with the `image.hash`. |
 | `language` | ISO 2-letter language code of the post. Defaults to the publication’s language setting. |
 | `pinned` | Boolean that indicates whether the post was marked as pinned. |
 | `publishedAt` | ISO date at which the post was published. |
@@ -58,10 +59,9 @@ curl -X GET https://api.postodian.com/v1/posts \
     {
       "id": "9r8wY8PY",
       "blocks": [],
-      "categories": [
-        ...
-      ],
+      "categories": [],
       "createdAt": "2020-02-19T22:53:15.839Z",
+      "cta": null,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis purus enim, lobortis cursus est bibendum vitae. Aliquam molestie quis diam ac pulvinar. Aliquam congue mattis enim et aliquam.",
       "language": "en",
       "image": {
@@ -117,10 +117,9 @@ Using `html` can be useful if you do not want to iterate through the blocks and 
 {
   "id": "9r8wY8PY",
   "blocks": [],
-  "categories": [
-    ...
-  ],
+  "categories": [],
   "createdAt": "2020-02-19T22:53:15.839Z",
+  "cta": null,
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis purus enim, lobortis cursus est bibendum vitae. Aliquam molestie quis diam ac pulvinar. Aliquam congue mattis enim et aliquam.",
   "language": "en",
   "image": {
