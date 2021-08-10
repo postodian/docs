@@ -11,12 +11,12 @@ We included as much data as possible to help you create SEO-friendly meta tags f
 | `id` | Unique identifier for the object. |
 | `blocks` | Array of block objects that make up the post’s content. This field is included by default if the `output` parameter is not set. |
 | `categories` | Array of [category objects](https://postodian.com/docs/categories) associated with the post. |
-| `cta` | Populated call-to-action object if attached. Defaults to `null`. |
+| `cta` | Call-to-action object if attached. Defaults to `null`. |
 | `createdAt` | ISO date at which the object was created. |
 | `description` | Description of the post used in meta tags. |
 | `html` | HTML version of the post’s content. This field is only included if the `output` parameter is set to `html`. |
 | `image.hash` | Unique image file identifier (hash). |
-| `image.resolutions` | Thumbnail image sources in various resolutions: `default` (730px), `160`, `350`, `540` and `1110`. We use [imgix](https://imgix.com) for adaptive image processing and delivery. If the provided resolutions are inadequate, you can perform your own [image transformations](https://docs.imgix.com/apis/rendering) with the `image.hash`. |
+| `image.resolutions` | Thumbnail image sources in various resolutions: `default` (730px), `160`, `350`, `540`, `1110` and `1320`. We use [imgix](https://imgix.com) for adaptive image processing and delivery. If the provided resolutions are inadequate, you can perform your own [image transformations](https://docs.imgix.com/apis/rendering) with the `image.hash`. |
 | `language` | ISO 2-letter language code of the post. Defaults to the publication’s language setting. |
 | `pinned` | Boolean that indicates whether the post was marked as pinned. |
 | `publishedAt` | ISO date at which the post was published. |
@@ -71,7 +71,8 @@ curl -X GET https://api.postodian.com/v1/posts \
           "160": null,
           "350": null,
           "540": null,
-          "1110": null
+          "1110": null,
+          "1320": null
         }
       },
       "language": "en",
@@ -129,7 +130,8 @@ Using `html` can be useful if you do not want to iterate through the blocks and 
       "160": null,
       "350": null,
       "540": null,
-      "1110": null
+      "1110": null,
+      "1320": null
     }
   },
   "language": "en",
