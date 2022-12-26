@@ -1,15 +1,15 @@
 # Categories
 
-A category object can be attached to posts and makes them filterable by category. As a consequence, you can offer category pages in your blog including metadata returned by the endpoints.
+A category object can be attached to articles and makes them filterable by category. As a consequence, you can offer category pages in your blog including metadata returned by the endpoints.
 
 ## The Category Object
 
 | Key | Description |
 | --- | --- |
 | `id` | Unique identifier for the object. |
+| `articlesCount` | Count of articles associated with this category. |
 | `createdAt` | ISO date at which the object was created. |
 | `description` | Description of the category used in meta tags. |
-| `postsCount` | Count of posts associated with this category. |
 | `slug` | Auto-generated slug based on the title. |
 | `title` | Title of the category. |
 | `updatedAt` | ISO date at which the object was last modified. |
@@ -32,9 +32,9 @@ curl -X GET https://api.postodian.com/v1/categories \
   "categories": [
     {
       "id": "ViupXsm9",
+      "articlesCount": 3,
       "createdAt": "2020-02-16T18:56:32.689Z",
       "description": "Vivamus accumsan sapien leo, vel tempus metus iaculis ut. Ut ultricies nulla et magna dignissim, eu lacinia lorem posuere. Ut pellentesque congue lacus, porta gravida neque varius in. Nullam viverra et arcu non pharetra.",
-      "postsCount": 3,
       "slug": "aliquam",
       "title": "Aliquam",
       "updatedAt": "2020-02-17T17:04:42.336Z"
@@ -61,9 +61,9 @@ curl -X GET https://api.postodian.com/v1/categories/:id \
 ```
 {
   "id": "ViupXsm9",
+  "articlesCount": 3,
   "createdAt": "2020-02-16T18:56:32.689Z",
   "description": "Vivamus accumsan sapien leo, vel tempus metus iaculis ut. Ut ultricies nulla et magna dignissim, eu lacinia lorem posuere. Ut pellentesque congue lacus, porta gravida neque varius in. Nullam viverra et arcu non pharetra.",
-  "postsCount": 3,
   "slug": "aliquam",
   "title": "Aliquam",
   "updatedAt": "2020-02-17T17:04:42.336Z"

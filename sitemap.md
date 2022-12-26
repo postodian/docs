@@ -1,10 +1,10 @@
 # Sitemap
 
-This endpoint is similar to the [posts endpoint](https://postodian.com/docs/posts), but specifically designed for generating sitemaps. It returns the complete list of all posts with only relevant fields.
+This endpoint is similar to the [articles endpoint](https://postodian.com/docs/articles), but specifically designed for generating sitemaps. It returns the complete list of all articles with only relevant fields.
 
-## List All Posts
+## List All Articles
 
-Retrieves a list of all published posts. Unpublished posts (i.e. drafted or scheduled posts) are not included.
+Retrieves a list of all published articles. Unpublished articles (i.e. drafted or scheduled articles) are not included.
 
 ### Request
 
@@ -17,7 +17,7 @@ curl -X GET https://api.postodian.com/v1/sitemap \
 
 ```
 {
-  "posts": [
+  "articles": [
     {
       "id": "9r8wY8PY",
       "categories": [],
@@ -25,6 +25,6 @@ curl -X GET https://api.postodian.com/v1/sitemap \
       "updatedAt": "2020-04-04T16:05:35.681Z"
     }
   ],
-  "postsCount": 1
+  "articlesCount": 1
 }
 ```

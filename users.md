@@ -1,6 +1,6 @@
 # Users
 
-With the user object, you can enrich your posts with biographical information about an author (or authors). The user object is a merge of profile information provided by the users themselves, and what you have set for the user in your publication’s user administration.
+With the user object, you can enrich your articles with biographical information about an author (or authors). The user object is a merge of profile information provided by the users themselves, and what you have set for the user in your publication’s user administration.
 
 ## The User Object
 
@@ -15,7 +15,7 @@ With the user object, you can enrich your posts with biographical information ab
 | `image.resolutions` | Thumbnail image URLs in various resolutions: `default` (80px), `160`, `320`, `540` and `1080`. We use [imgix](https://imgix.com) for adaptive image processing and delivery. If the provided resolutions are inadequate, you can perform your own [image transformations](https://docs.imgix.com/apis/rendering) with the `image.hash`. |
 | `name` | Name of the user. |
 | `phone` | Phone number which you can edit in your publication’s user administration. |
-| `postsCount` | Count of posts this user has written for the publication. |
+| `articlesCount` | Count of articles this user has written for the publication. |
 | `profiles` | URLs to various social media profiles that the user has provided in the profile settings. |
 | `slug` | Auto-generated slug based on the name. This is not necessarily unique if you have more than one user in your publication with the identical name. |
 | `title` | Job title or position which you can edit in your publication’s user administration. |
@@ -41,6 +41,7 @@ curl -X GET https://api.postodian.com/v1/users \
   "users": [
     {
       "id": "DQfg-HWhQ",
+      "articlesCount": 4,
       "bio": "Donec neque ipsum, eleifend ac augue vel, mattis sollicitudin erat. Mauris vitae purus a neque vulputate malesuada. Nullam cursus ullamcorper diam, sed pretium metus varius et. Nullam tincidunt ullamcorper mi, vitae tristique est congue ut. Integer vel dolor auctor, pretium ligula quis, placerat lectus.",
       "email": "michael@writer.com",
       "externalId": null,
@@ -56,7 +57,6 @@ curl -X GET https://api.postodian.com/v1/users \
       },
       "name": "Michael Writer",
       "phone": null,
-      "postsCount": 4,
       "profiles": {
         "instagram": null,
         "linkedin": null,
@@ -87,6 +87,7 @@ curl -X GET https://api.postodian.com/v1/users/:id \
 ```
 {
   "id": "DQfg-HWhQ",
+  "articlesCount": 4,
   "bio": "Donec neque ipsum, eleifend ac augue vel, mattis sollicitudin erat. Mauris vitae purus a neque vulputate malesuada. Nullam cursus ullamcorper diam, sed pretium metus varius et. Nullam tincidunt ullamcorper mi, vitae tristique est congue ut. Integer vel dolor auctor, pretium ligula quis, placerat lectus.",
   "email": "michael@writer.com",
   "externalId": null,
@@ -102,7 +103,6 @@ curl -X GET https://api.postodian.com/v1/users/:id \
   },
   "name": "Michael Writer",
   "phone": null,
-  "postsCount": 4,
   "profiles": {
     "instagram": null,
     "linkedin": null,
