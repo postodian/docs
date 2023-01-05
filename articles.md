@@ -17,11 +17,11 @@ We included as much data as possible to help you create SEO-friendly meta tags f
 | `html` | HTML version of the article’s content. This field is only included if the `output` parameter is set to `html`. |
 | `image.hash` | Unique image file identifier (hash). |
 | `image.resolutions` | Thumbnail image sources in various resolutions: `default` (730px), `160`, `350`, `540`, `1110` and `1320`. We use [imgix](https://imgix.com) for adaptive image processing and delivery. If the provided resolutions are inadequate, you can perform your own [image transformations](https://docs.imgix.com/apis/rendering) with the `image.hash`. |
+| `keywords` | Array of strings by which articles can be queried. |
 | `language` | ISO 2-letter language code of the article. Defaults to the publication’s language setting. |
 | `pinned` | Boolean that indicates whether the article was marked as pinned. |
 | `publishedAt` | ISO date at which the article was published. |
 | `slug` | Auto-generated slug based on the title. Once a article is published, it is no longer changed automatically. |
-| `tags` | Array of strings by which articles can be queried. |
 | `title` | Title of the article. |
 | `updatedAt` | ISO date at which the object was last modified. |
 | `users` | Array of [user objects](https://postodian.com/docs/users) associated with the article. |
@@ -44,11 +44,11 @@ curl -X GET https://api.postodian.com/v1/articles \
 | Parameter | Description |
 | --- | --- |
 | `excludes` <small>optional</small> | Comma-separated string of article IDs that you want to exclude from the response. Example for 3 excludes: `BbNDJTgm,b6pmUDnpX,GU_b_IeDN`. This parameter can be useful if you want to display other recent articles but wish to exclude the articles that your reader is currently browsing on. |
+| `keywords` <small>optional</small> | Comma-separated string of keywords that articles must contain to be included in the response. Example for articles containing either of the 2 keywords: `lorem,ipsum`. |
 | `limit` <small>optional</small> | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. |
 | `output` <small>optional</small> | The way you would like a article’s content outputted in the response. Can be either `blocks` or `html`. Defaults to `blocks`. Read [more about blocks](https://postodian.com/docs/blocks) and our built-in HTML output. |
 | `page` <small>optional</small> | Integer for the current page. |
 | `sort` <small>optional</small> | The field name and order by which to sort articles. Must follow the pattern `FIELD_NAME:asc` (ascending) or `FIELD_NAME:desc` (descending). Defaults to `publishedAt:desc`, whereby articles are sorted by `publishedAt` in `desc` order. |
-| `tags` <small>optional</small> | Comma-separated string of tags that articles must contain to be included in the response. Example for articles containing either of the 2 tags: `lorem,ipsum`. |
 
 ### Response
 
@@ -74,11 +74,11 @@ curl -X GET https://api.postodian.com/v1/articles \
           "1320": null
         }
       },
+      "keywords": [],
       "language": "en",
       "pinned": false,
       "publishedAt": "2020-03-21T12:57:00.014Z",
       "slug": "lorem-ipsum-dolor-sit-amet",
-      "tags": [],
       "title": "Lorem ipsum dolor sit amet",
       "updatedAt": "2020-04-04T16:05:35.681Z",
       "users": [
@@ -134,11 +134,11 @@ Using `html` can be useful if you do not want to iterate through the blocks and 
       "1320": null
     }
   },
+  "keywords": [],
   "language": "en",
   "pinned": false,
   "publishedAt": "2020-03-21T12:57:00.014Z",
   "slug": "lorem-ipsum-dolor-sit-amet",
-  "tags": [],
   "title": "Lorem ipsum dolor sit amet",
   "updatedAt": "2020-04-04T16:05:35.681Z",
   "users": [
