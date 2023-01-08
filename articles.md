@@ -1,6 +1,6 @@
 # Articles
 
-An article object contains all relevant data required in order to display a article on your website. It also contains hydrated data of associated categories and of associated users.
+An article object contains all relevant data required in order to display a article on your website. It also contains hydrated data of associated sections and of associated users.
 
 We included as much data as possible to help you create SEO-friendly meta tags for a page’s head and rich display of SERP.
 
@@ -11,7 +11,6 @@ We included as much data as possible to help you create SEO-friendly meta tags f
 | `id` | Unique identifier for the object. |
 | `action` | Call-to-action object if attached. Defaults to `null`. |
 | `blocks` | Array of block objects that make up the article’s content. This field is included by default if the `output` parameter is not set. |
-| `categories` | Array of [category objects](https://postodian.com/docs/categories) associated with the article. |
 | `createdAt` | ISO date at which the object was created. |
 | `description` | Description of the article used in meta tags. |
 | `html` | HTML version of the article’s content. This field is only included if the `output` parameter is set to `html`. |
@@ -21,6 +20,7 @@ We included as much data as possible to help you create SEO-friendly meta tags f
 | `language` | ISO 2-letter language code of the article. Defaults to the publication’s language setting. |
 | `pinned` | Boolean that indicates whether the article was marked as pinned. |
 | `publishedAt` | ISO date at which the article was published. |
+| `sections` | Array of [section objects](https://postodian.com/docs/sections) associated with the article. |
 | `slug` | Auto-generated slug based on the title. Once a article is published, it is no longer changed automatically. |
 | `title` | Title of the article. |
 | `updatedAt` | ISO date at which the object was last modified. |
@@ -59,7 +59,6 @@ curl -X GET https://api.postodian.com/v1/articles \
       "id": "9r8wY8PY",
       "action": null,
       "blocks": [],
-      "categories": [],
       "createdAt": "2020-02-19T22:53:15.839Z",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis purus enim, lobortis cursus est bibendum vitae. Aliquam molestie quis diam ac pulvinar. Aliquam congue mattis enim et aliquam.",
       "language": "en",
@@ -78,6 +77,7 @@ curl -X GET https://api.postodian.com/v1/articles \
       "language": "en",
       "pinned": false,
       "publishedAt": "2020-03-21T12:57:00.014Z",
+      "sections": [],
       "slug": "lorem-ipsum-dolor-sit-amet",
       "title": "Lorem ipsum dolor sit amet",
       "updatedAt": "2020-04-04T16:05:35.681Z",
@@ -119,7 +119,6 @@ Using `html` can be useful if you do not want to iterate through the blocks and 
   "id": "9r8wY8PY",
   "action": null,
   "blocks": [],
-  "categories": [],
   "createdAt": "2020-02-19T22:53:15.839Z",
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis purus enim, lobortis cursus est bibendum vitae. Aliquam molestie quis diam ac pulvinar. Aliquam congue mattis enim et aliquam.",
   "language": "en",
@@ -138,6 +137,7 @@ Using `html` can be useful if you do not want to iterate through the blocks and 
   "language": "en",
   "pinned": false,
   "publishedAt": "2020-03-21T12:57:00.014Z",
+  "sections": [],
   "slug": "lorem-ipsum-dolor-sit-amet",
   "title": "Lorem ipsum dolor sit amet",
   "updatedAt": "2020-04-04T16:05:35.681Z",

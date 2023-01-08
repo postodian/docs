@@ -20,7 +20,7 @@ curl -X GET https://api.postodian.com/v1/sitemap \
   "articles": [
     {
       "id": "9r8wY8PY",
-      "categories": [],
+      "sections": [],
       "slug": "lorem-ipsum-dolor-sit-amet",
       "updatedAt": "2020-04-04T16:05:35.681Z"
     }

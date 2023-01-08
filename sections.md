@@ -1,27 +1,27 @@
-# Categories
+# Sections
 
-A category object can be attached to articles and makes them filterable by category. As a consequence, you can offer category pages in your blog including metadata returned by the endpoints.
+A section object can be attached to articles and makes them filterable by section. As a consequence, you can offer section pages in your blog including metadata returned by the endpoints.
 
-## The Category Object
+## The Section Object
 
 | Key | Description |
 | --- | --- |
 | `id` | Unique identifier for the object. |
-| `articlesCount` | Count of articles associated with this category. |
+| `articlesCount` | Count of articles associated with this section. |
 | `createdAt` | ISO date at which the object was created. |
-| `description` | Description of the category used in meta tags. |
+| `description` | Description of the section used in meta tags. |
 | `slug` | Auto-generated slug based on the title. |
-| `title` | Title of the category. |
+| `title` | Title of the section. |
 | `updatedAt` | ISO date at which the object was last modified. |
 
-## List All Categories
+## List All Sections
 
-Retrieves a list of category objects for your publication. Results are sorted by `title`.
+Retrieves a list of section objects for your publication. Results are sorted by `title`.
 
 ### Request
 
 ```
-curl -X GET https://api.postodian.com/v1/categories \
+curl -X GET https://api.postodian.com/v1/sections \
      -H "X-API-KEY: pk_febaf9ad8a2dc82a16d1d923" \
 ```
 
@@ -29,7 +29,8 @@ curl -X GET https://api.postodian.com/v1/categories \
 
 ```
 {
-  "categories": [
+  "hasMore": false
+  "sections": [
     {
       "id": "ViupXsm9",
       "articlesCount": 3,
@@ -40,19 +41,18 @@ curl -X GET https://api.postodian.com/v1/categories \
       "updatedAt": "2020-02-17T17:04:42.336Z"
     }
   ],
-  "categoriesCount": 1,
-  "hasMore": false
+  "sectionsCount": 1,
 }
 ```
 
-## Retrieve a Single Category
+## Retrieve a Single Section
 
-Retrieves a category object by its unique identifier.
+Retrieves a section object by its unique identifier.
 
 ### Request
 
 ```
-curl -X GET https://api.postodian.com/v1/categories/:id \
+curl -X GET https://api.postodian.com/v1/sections/:id \
      -H "X-API-KEY: pk_febaf9ad8a2dc82a16d1d923" \
 ```
 

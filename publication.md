@@ -1,6 +1,6 @@
 # Publication
 
-The publication object can be useful to obtain high-level metadata about your publication, for example to use on the index page of your blog. To retrieve more granular data for your publication, such as [categories](https://postodian.com/docs/categories) or [users](https://postodian.com/docs/users), please use the respective endpoints.
+The publication object can be useful to obtain high-level metadata about your publication, for example to use on the index page of your blog. To retrieve more granular data for your publication, such as [sections](https://postodian.com/docs/sections) or [users](https://postodian.com/docs/users), please use the respective endpoints.
 
 ## The Publication Object
 
